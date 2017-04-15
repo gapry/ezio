@@ -40,7 +40,4 @@ before_deploy:
 
 deploy:
     provider: script
-    script: tests/deploy.sh $TRAVIS_TAG
-    on:
-        tags: true
-        all_branches: true
+    script: tests/deploy.sh
