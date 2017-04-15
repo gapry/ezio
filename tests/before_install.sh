@@ -8,8 +8,8 @@ mkdir -p build
 ./configure --prefix=$PWD/build/
 make -j4
 make install
-tar zcf libtorrent-rasterbar.tar.gz $PWD/build
+tar zcf libtorrent-rasterbar.tar.gz build
 
 SSH_ARGS="-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 # ssh to ezio.kojuro.date and run script
-scp $SSH_ARGS libbtorrent-rasterbar.tar.gz "ezio@ezio.kojuro.date:~/"
+scp $SSH_ARGS libtorrent-rasterbar.tar.gz "ezio@ezio.kojuro.date:~/"
