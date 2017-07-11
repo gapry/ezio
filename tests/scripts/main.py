@@ -15,8 +15,8 @@ def get_session():
         username=os.environ['OS_USERNAME'],
         password=os.environ['OS_PASSWORD'],
         project_name=os.environ['OS_PROJECT_NAME'],
-        user_domain_name='local',
-        project_domain_name='local',
+        user_domain_name=os.environ['OS_USER_DOMAIN_NAME'],
+        project_domain_name=os.environ['OS_USER_DOMAIN_NAME'],
     )
     return session.Session(auth=auth, verify=False)
 
