@@ -12,8 +12,6 @@ eval $(ssh-agent)
 ssh-add ezio.pem
 
 # compile
-rm -rf ezio/
-git clone https://github.com/tjjh89017/ezio
 cd ezio && make clean all
 cp ezio/ezio static-ezio
 
