@@ -6,6 +6,7 @@ notifications:
     email: false
 
 before_install:
+    - openssl aes-256-cbc -K $encrypted_f32060d02f25_key -iv $encrypted_f32060d02f25_iv -in tests/ezio.pem.enc -out tests/ezio.pem -d
     - chmod 600 tests/ezio.pem
     - eval $(ssh-agent)
     - ssh-add tests/ezio.pem
