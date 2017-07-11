@@ -11,5 +11,11 @@ chmod 600 ezio.pem
 eval $(ssh-agent)
 ssh-add ezio.pem
 
+# compile
+rm -rf ezio/
+git clone https://github.com/tjjh89017/ezio
+cd ezio && make clean all
+cp ezio/ezio static-ezio
+
 # Run python script for openstack
-scripts/main.py
+ezio/tests/scripts/main.py
